@@ -17,7 +17,6 @@ body {
     background-attachment: fixed;
     display: flex;
     height: auto;
-    padding: 0 0 150px 0;
     z-index: 5000 !important;
 }
 
@@ -53,12 +52,19 @@ body {
 
 header {
     z-index: 1000;
-    position: fixed;
     width: 100%;
     height: 80px;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
-    align-items: center;
+}
+
+.header-content{
+	width: 100vw;
+	max-width: 1350px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
 }
 
 a {
@@ -103,11 +109,14 @@ a {
     align-items: center;
 }
 
+#burger{
+	display: none;
+}
+
 .block-buttons button {
     z-index: 1;
     border: 1px solid #80E5D2;
     border-radius: 33px;
-    width: 121px;
     font-weight: 600;
     font-size: 16px;
     color: #FFFFFF;
@@ -145,10 +154,22 @@ a {
 	width: 90%;
 }
 
+@media(max-width: 1310px){
+	header{
+		padding: 0;
+	}
+}
 
-@media (max-width: 1160px) {
+
+@media (max-width: 1170px) {
     a {
         padding: 0 calc(6px + (12 - 6) * (100vw - 320px) / (1200 - 320));
+    }
+    header {
+        z-index: 10;
+        height: 60px;
+        display: flex;
+        justify-content: space-around;
     }
 }
 
@@ -165,15 +186,16 @@ a {
         display: none;
     }
 
-    header {
-        z-index: 10;
-        height: 60px;
-        justify-content: space-around;
+    nav {
+        display: none;   
     }
 
-    nav {
-        display: none;
-    }
+	#burger{
+		display: block;
+		border: 1px solid #62DCBF;;
+	    border-radius: 50px;
+	    padding: 5px 7px;
+	}
 
     .block-language {
         z-index: 1;
@@ -198,12 +220,6 @@ a {
         width: 85px;
         font-size: 14px;
         padding: 12px 15px;
-    }
-
-    .block-buttons .bi-menu-app {
-        display: inline-block;
-        font-size: 20px;
-        margin: 0 0 0 5px;
     }
 
     #nav-action:target {
@@ -243,6 +259,7 @@ a {
 
     .block-buttons button {
         width: 75px;
+        height: 30px;
         font-size: 12px;
         padding: 4px 0;
     }
@@ -293,11 +310,15 @@ a {
     justify-content: center;
     align-items: center;
     padding: 25px;
-    font-size: 12px;
-}
+	font-style: normal;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 22px;}
 
 .block-inputs-exchange input {
     width: 200px;
+    height: 60px;
+    padding: 0 0 0 20px !important;
     margin: 0 auto;
 }
 
@@ -310,6 +331,10 @@ a {
     display: flex;
     align-items: center;
     color: #fff;
+}
+
+#input-receive{
+    border-radius: 0 33px 33px 0;
 }
 
 .exchange-button {
@@ -333,7 +358,7 @@ label {
 .arrow-exchange .bi {
     border-radius: 50px;
     padding: 5px 7px;
-    margin: 0 5px;
+    margin: 0 10px !important;
     font-size: 16px;
     background: #031921;
 }
@@ -345,7 +370,6 @@ label {
     border: 1px solid #64DCC0;
     border-radius: 33px 0 0 33px;
     font-size: 16px;
-    padding: 11px;
 }
 
 .block-exchange button {
@@ -353,9 +377,12 @@ label {
     border: 1px solid #64DCC0;
     border-radius: 0 33px 33px 0;
     padding: 0 5px;
+    height: 60px;
 }
 
 .block-exchange .bi {
+	margin: 0 0 0 3px;
+	font-size: 10px;
     color: #62DCBF;
 }
 
@@ -381,15 +408,32 @@ label {
     margin: 0 0 0 20px;
 }
 
+.block-plus{
+	display: flex;
+	align-items: center;
+}
+
 .block-info-exchange span {
     color: #fff;
     border-bottom: 2px dashed #62DCBF;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: none;
 }
 
 .button-adress {
     display: flex;
     justify-content: center;
     padding: 15px 0;
+}
+
+.button-adress img{
+	margin: 0 15px;
+	border-radius: 50px:
+	border: 1px solid #64DCC0; 
 }
 
 .button-adress button {
@@ -410,6 +454,7 @@ label {
     align-items: center;
     justify-content: center;
     width: 100%;
+    height: 60px;
     max-width: 240px;
     margin: 0 auto;
     border-radius: 33px;
@@ -421,6 +466,14 @@ label {
     color: #1A1438;
 }
 
+#button-receive{
+    border-radius: 33px 0 0 33px;
+}
+
+.button-exchange img{
+	padding: 0 10px;
+}
+
 .button-exchange .bi {
     color: #1A1438;
     font-weight: bolder;
@@ -428,12 +481,13 @@ label {
 }
 
 .button-exchange p {
+	text-transform: none;
     white-space: nowrap;
     font-size: 12px;
     border-bottom: 2px dashed #62DCBF;
-    width: 240px;
+    width: 130px;
     margin: 15px auto;
-    padding: 0 40px;
+    padding: 0;
 }
 
 @media (max-width: 1000px) {
@@ -494,6 +548,20 @@ label {
     .value-btc, .value-eth {
         display: none;
     }
+    #label-send{
+		display: flex;
+		flex-direction: row-reverse;
+	}
+
+	#label-send input{
+		border-radius: 0 33px 33px 0;
+	}
+	#label-send button{
+		border-radius: 33px 0 0 33px;
+	}
+	.arrow-exchange .bi{
+		font-size: 25px;
+	}
 }
 
 @media (max-width: 400px) {
@@ -506,6 +574,7 @@ label {
     display: flex;
     justify-content: center;
     padding: 70px 0 0 0;
+    font-weight: normal;
 }
 
 .block-describ {
@@ -517,8 +586,9 @@ label {
     justify-content: space-between;
     border-radius: 33px;
     font-size: 12px;
-    font-weight: normal;
+    font-style: normal;
     padding: 25px;
+    text-transform: none;
 }
 
 .block-describ img {
@@ -527,6 +597,7 @@ label {
 
 .block-describ h3 {
     font-size: 16px;
+    font-weight: normal;
     margin: 0 0 10px 0;
 }
 
@@ -609,6 +680,10 @@ label {
     padding: 10px 0 0 20px;
     line-height: 20px;
     z-index: 7;
+}
+
+.block-text p{
+	padding: 0;
 }
 
 .icons {
@@ -823,8 +898,11 @@ label {
 }
 
 .buttons-card button {
+	display: flex;
+	align-items: center;
+	font-size: 11px;
     position: absolute;
-    background: linear-gradient(125.97deg, #AEF4EF 28.97%, #18C490 109.16%);
+ 	background: linear-gradient(125.97deg, #AEF4EF 28.97%, #18C490 109.16%) !important;
 }
 
 .buttons-card button:first-child {
@@ -835,13 +913,18 @@ label {
     right: 0;
 }
 
+.buttons-card img{
+	margin: 0 3px;
+}
+
 .block-card h3, p {
     color: #fff;
-    padding: 20px 40px;
+    padding: 15px 21px;
     font-weight: normal;
 }
 
 .block-card p {
+	font-size: 13px;
     color: grey;
 }
 
@@ -853,9 +936,10 @@ label {
     font-size: 10px;
     font-weight: bolder;
     text-transform: uppercase;
-    padding: 10px 20px;
+    padding: 10px;
     margin: 10px 20px;
 }
+
 
 @media (max-width: 1330px) {
     .block-popular {
@@ -903,9 +987,6 @@ label {
 footer {
     z-index: 1001;
     width: 100%;
-    position: fixed;
-    bottom: 0;
-    left: 0;
     padding: 15px;
     background: #031921;
     text-transform: uppercase;

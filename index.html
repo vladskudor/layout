@@ -26,34 +26,37 @@
     </div>
     <div class="main">
         <header>
-            <div class="block-logo">
-                <img src="images/header-images/logo.png" alt="">
-                <img src="images/header-images/zone.png" class="logo-image-two" alt="">
-                <img src="images/header-images/51.png" class="logo-image-three" alt="">
-            </div>
-            <div class="block-language">
-                <img src="images/header-images/language.png" alt="">
-                <span>English</span>
-                <i class="bi bi-chevron-down"></i>
-            </div>
-            <div>
-                <nav id="nav-action">
-                    <a href="">Home</a>
-                    <a href="">About</a>
-                    <a href="">Blog</a>
-                    <a href="">FAQ</a>
-                    <a href="">Support</a>
-                </nav>
-            </div>
-            <div class="block-buttons">
-                <button>Sign in</button>
-                <button class="button-sign-up">Sign up</button>
-            </div>
-            <div class="block-buttons">
-                <a href="#nav-action">
-                    <i class="bi bi-menu-app"></i>
-                </a>
-            </div>
+        	<div class="header-content">
+        		<div class="block-logo">
+	                <img src="images/header-images/logo.png" alt="">
+	                <img src="images/header-images/zone.png" class="logo-image-two" alt="">
+	                <img src="images/header-images/51.png" class="logo-image-three" alt="">
+	            </div>
+	            <div class="block-language">
+	                <img src="images/header-images/language.png" alt="">
+	                <span>English</span>
+	                <i class="bi bi-chevron-down"></i>
+	            </div>
+	            <div>
+	                <nav id="nav-action">
+	                    <a href="">Home</a>
+	                    <a href="">About</a>
+	                    <a href="">Blog</a>
+	                    <a href="">FAQ</a>
+	                    <a href="">Support</a>
+	                </nav>
+	            </div>
+	            <div class="block-buttons">
+	                <button>Sign in</button>
+	                <button class="button-sign-up">Sign up</button>
+	            </div>
+	            <div id="burger"class="block-buttons">
+	                <a href="#nav-action" style="padding: 0;">
+	                    <img src="images/main-content/burger.png" alt="">
+	                </a>
+	            </div>
+        	</div>
+            
         </header>
         <div class="block-exchange">
             <h1>
@@ -63,7 +66,7 @@
                 <div class="block-inputs-exchange">
                     <div>
                         <span>send</span>
-                        <label for="input-send">
+                        <label id="label-send" for="input-send">
                             <input id="input-send" type="text" value="0.01036624">
                             <button class="exchange-button">
                                 <img src="images/main-content/35816.png" alt="">
@@ -79,18 +82,18 @@
                     <div>
                         <span>receive</span>
                         <label for="input-receive">
-                            <input id="input-receive" type="text" value="0.1499964">
-                            <button class="exchange-button">
+                            <button id="button-receive" class="exchange-button">
                                 <img src="images/main-content/35815.png" alt="">
                                 ETH
                                 <i class="bi bi-chevron-down"></i>
                             </button>
+                            <input id="input-receive" type="text" value="0.1499964">
                         </label>
                         <b>1 ETH = 0.0632155902 ETH</b>
                     </div>
                 </div>
                 <div class="block-info-exchange">
-                    <div>
+                    <div class="block-plus">
                         <img src="images/main-content/plus.svg" alt="">
                         <span>Try enghting!</span>
                     </div>
@@ -102,7 +105,7 @@
                     </div>
                 </div>
                 <div class="button-adress">
-                    <button>
+                    <button style="border: 0">
                         <img src="images/main-content/adress.png" alt="">
                         Your Ethereum adress
                     </button>
@@ -110,7 +113,7 @@
                 <div class="button-exchange">
                     <button>
                         Exchange now
-                        <i class="bi bi-arrow-right"></i>
+                        <img src="images/main-content/arrow-left.png" alt="">
                     </button>
                     <div>
                         <p>What is the difference?</p>
@@ -237,7 +240,7 @@
                     </button>
                     <button>
                         <img src="images/main-content/date.png" alt="">
-                        # free mint tokens
+                        12.02.2022
                     </button>
                 </div>
                 <img class="main-background-card" src="images/main-content/card1.png" alt="">
@@ -249,7 +252,31 @@
                         This section was made to show the user what are the most common misconceptions in the field of
                         NFT and thereby certify that this is not the case.
                     </p>
+                    <button class="block-more-info">
+                        more info
+                    </button>
+                </div>
+            </div>
+           <div class="block-card">
+                <div class="buttons-card">
                     <button>
+                        # Free mint tokens
+                    </button>
+                    <button>
+                        <img src="images/main-content/date.png" alt="">
+                        12.02.2022
+                    </button>
+                </div>
+                <img class="main-background-card" src="images/main-content/card1.png" alt="">
+                <div>
+                    <h3>
+                        Free mint tokens in the Ethereum network
+                    </h3>
+                    <p>
+                        This section was made to show the user what are the most common misconceptions in the field of
+                        NFT and thereby certify that this is not the case.
+                    </p>
+                    <button class="block-more-info">
                         more info
                     </button>
                 </div>
@@ -261,7 +288,7 @@
                     </button>
                     <button>
                         <img src="images/main-content/date.png" alt="">
-                        # free mint tokens
+                        12.02.2022
                     </button>
                 </div>
                 <img class="main-background-card" src="images/main-content/card1.png" alt="">
@@ -273,36 +300,39 @@
                         This section was made to show the user what are the most common misconceptions in the field of
                         NFT and thereby certify that this is not the case.
                     </p>
-                    <button>
-                        more info
-                    </button>
-                </div>
-            </div>
-            <div class="block-card">
-                <div class="buttons-card">
-                    <button>
-                        # Free mint tokens
-                    </button>
-                    <button>
-                        <img src="images/main-content/date.png" alt="">
-                        # free mint tokens
-                    </button>
-                </div>
-                <img class="main-background-card" src="images/main-content/card1.png" alt="">
-                <div>
-                    <h3>
-                        Free mint tokens in the Ethereum network
-                    </h3>
-                    <p>
-                        This section was made to show the user what are the most common misconceptions in the field of
-                        NFT and thereby certify that this is not the case.
-                    </p>
-                    <button>
+                    <button class="block-more-info">
                         more info
                     </button>
                 </div>
             </div>
         </div>
+        <footer>
+		    <div class="footer-content">
+		        <div class="footer-info">
+		            <div class="footer-logo">
+		                <img src="images/header-images/logo.png" alt="">
+		                <img src="images/header-images/zone.png" alt="">
+		                <img src="images/header-images/51.png" alt="">
+		            </div>
+		            <div>
+		                <p>(C) 2020-2022 Zone51. All rights reserved.</p>
+		            </div>
+		        </div>
+		        <div>
+		            <nav>
+		                <a href="">home</a>
+		                <a href="">about</a>
+		                <a href="">blog</a>
+		                <a href="">faq</a>
+		                <a href=""></a>
+		            </nav>
+		        </div>
+		        <div class="block-support">
+		            <img src="images/footer-images/message.png" alt="">
+		            support
+		        </div>
+		    </div>
+		</footer>
     </div>
 </div>
 <div class="element-of-background-left">
@@ -314,32 +344,5 @@
 <div class="element-of-background-texture">
     <img src="images/background/background-texture.png" alt="">
 </div>
-<footer>
-    <div class="footer-content">
-        <div class="footer-info">
-            <div class="footer-logo">
-                <img src="images/header-images/logo.png" alt="">
-                <img src="images/header-images/zone.png" alt="">
-                <img src="images/header-images/51.png" alt="">
-            </div>
-            <div>
-                <p>(C) 2020-2022 Zone51. All rights reserved.</p>
-            </div>
-        </div>
-        <div>
-            <nav>
-                <a href="">home</a>
-                <a href="">about</a>
-                <a href="">blog</a>
-                <a href="">faq</a>
-                <a href=""></a>
-            </nav>
-        </div>
-        <div class="block-support">
-            <img src="images/footer-images/message.png" alt="">
-            support
-        </div>
-    </div>
-</footer>
 </body>
 </html>
