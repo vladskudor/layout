@@ -18,6 +18,7 @@ body {
     display: flex;
     height: auto;
     padding: 0 0 150px 0;
+    z-index: 5000 !important;
 }
 
 .side-menu {
@@ -26,7 +27,7 @@ body {
     height: 100vh;
     text-align: right;
     padding: 10px;
-    z-index: 400;
+    z-index: 1000;
 }
 
 .side-menu img {
@@ -47,6 +48,7 @@ body {
 
 .main {
     width: 100%;
+    z-index: 1000;
 }
 
 header {
@@ -899,7 +901,7 @@ label {
 }
 
 footer {
-    z-index: 555;
+    z-index: 1001;
     width: 100%;
     position: fixed;
     bottom: 0;
