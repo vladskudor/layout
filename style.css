@@ -864,6 +864,7 @@ label {
 
 @media (max-width: 500px) {
     .block-way-info {
+    	padding: 0;	
         height: auto;
         margin: 20px 0;
         flex-direction: column;
