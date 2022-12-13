@@ -811,9 +811,6 @@ label {
         margin: -220px 0 0 0;
     }
 
-    .icon3 img {
-    }
-
     .block-warning {
         z-index: 9;
         padding: 1%;
@@ -847,6 +844,7 @@ label {
         margin: 60px 0 0 0;	
     }
     .icon3 img{
+        width: 90px;
         margin: 25px 0 0 0;	
     }
     .icon3 {
