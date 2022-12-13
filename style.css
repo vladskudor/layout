@@ -798,6 +798,9 @@ label {
 }
 
 @media (max-width: 600px) {
+	.block-text{
+		padding: 10px;
+	}
     .block-text div {
         margin: 0;
         font-size: 14px;
@@ -864,7 +867,7 @@ label {
 
 @media (max-width: 500px) {
     .block-way-info {
-    	padding: 0;	
+    	padding: 0 10px;	
         height: auto;
         margin: 20px 0;
         flex-direction: column;
