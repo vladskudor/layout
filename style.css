@@ -400,7 +400,7 @@ label {
 
 .block-value .value-btc, .value-eth {
     margin: 0 95px ;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .block-info-exchange img {
@@ -410,7 +410,7 @@ label {
 .block-plus{
 	display: flex;
 	align-items: center;
-	padding: 0 25px;
+	padding: 0 25px 0 0;
 }
 
 .block-info-exchange span {
@@ -653,7 +653,7 @@ label {
     border-radius: 33px;
     width: 100vw;
     max-width: 1250px;
-    height: 366px;
+    height: 400px;
     font-size: 22px;
     color: #fff;
     display: grid;
@@ -813,23 +813,26 @@ label {
 }
 
 .block-ways-buy {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 20px;
+	place-items: center;
+	width:1300px; 
+	margin: 0 auto;
     width: 90vw;
     max-width: 1250px;
-    display: flex;
-    justify-content: space-between;
     margin: 20px auto;
 }
 
 .block-way-info {
     display: flex;
     justify-content: space-around;
-    padding: 10px;
+    padding: 10px 0 0 30px;
     background: linear-gradient(180deg, rgba(15, 115, 121, 0.5) 0%, rgba(11, 3, 33, 0.5) 100%);
     border-radius: 33px;
     height: 287px;
     color: #fff;
     font-size: 13px;
-    margin: 0 10px 0 0;
 }
 
 .block-way-info img {
@@ -851,7 +854,7 @@ label {
 @media (max-width: 900px) {
     .block-ways-buy {
         width: 90%;
-        flex-direction: column;
+        grid-template-columns: 1fr;
     }
 
     .block-way-info {
@@ -874,16 +877,21 @@ label {
 
 .block-popular {
     width: 100vw;
-    max-width: 900px;
+    /*max-width: 900px;*/
+    width: 1260px;
     margin: 0 auto;
-    display: flex;
-    justify-content: space-around;
+   /* display: flex;
+    justify-content: space-around;*/
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
 }
 
 .block-card {
     position: relative;
-    width: auto;
-    margin: 0 3px;
+/*    width: auto;
+    margin: 0 3px;*/
     background: linear-gradient(180deg, rgba(3, 15, 33, 0.7) 0%, rgba(3, 15, 33, 0) 100%);
     opacity: 0.9;
     border: 1px solid #303F4E;
@@ -941,20 +949,29 @@ label {
 
 @media (max-width: 1330px) {
     .block-popular {
-        width: auto;
+        width: 90vw;
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
+	.block-card {
+        display: flex;
+        flex-direction: column;
+    }
+
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
     .block-popular {
+    	width: 100%;
         display: grid;
-        grid-template-columns: .5fr;
+        grid-template-columns: 1fr;
     }
 
     .block-card {
-        width: 100%;
+        width: 90vw;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
     }
 
     .buttons-card button {
@@ -986,6 +1003,7 @@ footer {
     z-index: 1001;
     width: 100%;
     padding: 15px;
+    margin: 30px 0 0 0;
     background: #031921;
     text-transform: uppercase;
 }
