@@ -51,6 +51,7 @@ body {
 }
 
 header {
+	position: fixed;
     z-index: 1000;
     width: 100%;
     height: 80px;
@@ -110,6 +111,7 @@ a {
 }
 
 #burger{
+    z-index: 1000000;
 	display: none;
 }
 
@@ -222,7 +224,7 @@ a {
         padding: 12px 15px;
     }
 
-    #nav-action:target {
+    .nav-action{
         display: flex;
         justify-content: right;
         flex-direction: column;
@@ -235,10 +237,11 @@ a {
         padding: 0 10px;
     }
 
-    a {
+    .nav-action a {
         text-align: right;
         padding: 0 20% 0 0;
         width: 90vw;
+        height: 20vw;
         margin-top: 10vh;
         color: #fff;
         border-bottom: 2px solid #eee;
@@ -285,7 +288,7 @@ a {
     width: 100%;
     max-width: 787px;
     margin: 0 auto;
-    padding: 140px 0 0 0;
+    padding: 220px 0 0 0;
     color: #fff;
     font-size: 18px;
     font-weight: bold;
@@ -416,7 +419,6 @@ label {
 .block-info-exchange span {
     color: #fff;
     border-bottom: 2px dashed #62DCBF;
-    font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
@@ -793,7 +795,7 @@ label {
     }
 
     .icon3 img {
-        width: 90px;
+        width: 80px;
     }
 
     .block-warning {
@@ -814,8 +816,22 @@ label {
         font-size: 10px;
     }
 
-    .icon1 img, .icon2 img, .icon3 img {
-        width: 50px
+    .icon1 {
+        z-index: 9;
+        margin: -210px 0 0 0;
+    }
+    .icon1 img{
+    	width: 40%;	
+    }
+    .icon2 img{
+    	width: 40%;	
+    }
+    .icon3 img{
+    	width: 60%;	
+    }
+    .icon3 {
+        z-index: 9;
+        margin: -190px 0 0 0;
     }
 }
 
@@ -885,11 +901,8 @@ label {
 
 .block-popular {
     width: 100vw;
-    /*max-width: 900px;*/
     width: 1260px;
     margin: 0 auto;
-   /* display: flex;
-    justify-content: space-around;*/
     display: grid;
     grid-gap: 10px;
     grid-template-columns: 1fr 1fr 1fr;
@@ -898,8 +911,6 @@ label {
 
 .block-card {
     position: relative;
-/*    width: auto;
-    margin: 0 3px;*/
     background: linear-gradient(180deg, rgba(3, 15, 33, 0.7) 0%, rgba(3, 15, 33, 0) 100%);
     opacity: 0.9;
     border: 1px solid #303F4E;
@@ -1064,7 +1075,8 @@ footer p {
     }
 
     footer nav {
-        display: flex;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         width: 90vw;
     }
 
