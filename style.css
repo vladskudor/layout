@@ -752,6 +752,10 @@ label {
         text-align: center;
     }
 
+    .block-text{
+    	padding: 10px;
+    }
+
     .block-text div {
         margin: 20px 0;
         text-align: center;
