@@ -937,7 +937,6 @@ label {
 }
 
 .block-popular {
-    width: 100vw;
     width: 1260px;
     margin: 0 auto;
     display: grid;
@@ -1018,13 +1017,13 @@ label {
 
 @media (max-width: 1000px) {
     .block-popular {
-    	width: 100%;
+    	/*width: 100%;*/
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
     }
 
     .block-card {
-        width: 90vw;
+        width: 43vw;
         margin: 0;
         display: flex;
         flex-direction: column;
@@ -1041,6 +1040,11 @@ label {
 }
 
 @media (max-width: 600px) {
+    .block-popular {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
     .block-card {
         width: 90vw;
         margin: 10px auto;
