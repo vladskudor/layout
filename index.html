@@ -11,8 +11,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
 <div class="content">
@@ -28,102 +29,40 @@
     </div>
     <div class="main">
         <header>
-        	<div class="header-content">
-        		<div class="block-logo">
-	                <img src="images/header-images/logo.png" alt="">
-	                <img src="images/header-images/zone.png" class="logo-image-two" alt="">
-	                <img src="images/header-images/51.png" class="logo-image-three" alt="">
-	            </div>
-	            <div class="block-language">
-	                <img src="images/header-images/language.png" alt="">
-	                <span>English</span>
-	                <i class="bi bi-chevron-down"></i>
-	            </div>
-	            <div>
-	                <nav>
-	                    <a href="">Home</a>
-	                    <a href="">About</a>
-	                    <a href="">Blog</a>
-	                    <a href="">FAQ</a>
-	                    <a href="">Support</a>
-	                </nav>
-	            </div>
-	            <div class="block-buttons">
-	                <button>Sign in</button>
-	                <button class="button-sign-up">Sign up</button>
-	            </div>
-	            <div id="burger" class="block-buttons">
-	                <img src="images/main-content/burger.png" alt="">
-	            </div>
-        	</div>
-            
+            <div class="header-content">
+                <div class="block-logo">
+                    <img src="images/header-images/logo.png" alt="">
+                    <img src="images/header-images/zone.png" class="logo-image-two" alt="">
+                    <img src="images/header-images/51.png" class="logo-image-three" alt="">
+                </div>
+                <div class="block-language">
+                    <img src="images/header-images/language.png" alt="">
+                    <span>English</span>
+                    <i class="bi bi-chevron-down"></i>
+                </div>
+                <div>
+                    <nav>
+                        <a href="">Home</a>
+                        <a href="">About</a>
+                        <a href="">Blog</a>
+                        <a href="">FAQ</a>
+                        <a href="">Support</a>
+                    </nav>
+                </div>
+                <div class="block-buttons">
+                    <button>Sign in</button>
+                    <button class="button-sign-up">Sign up</button>
+                </div>
+                <div id="burger" class="block-buttons">
+                    <img src="images/main-content/burger.png" alt="">
+                </div>
+            </div>
+
         </header>
         <div class="block-exchange">
             <h1>
                 lighting cryptocurrency exchange
             </h1>
-<!--             <form action="">
-                <div class="block-inputs-exchange">
-                    <div>
-                        <span>send</span>
-                        <label id="label-send" for="input-send">
-                            <input id="input-send" type="text" value="0.01036624">
-                            <button class="exchange-button">
-                                <img src="images/main-content/35816.png" alt="">
-                                BTC
-                                <i class="bi bi-chevron-down"></i>
-                            </button>
-                        </label>
-                        <b>1 BTC = 14.435355902 ETH</b>
-                    </div>
-                    <div class="arrow-exchange">
-                        <i class="bi bi-arrow-left-right"></i>
-                    </div>
-                    <div>
-                        <span>receive</span>
-                        <label for="input-receive">
-                            <button id="button-receive" class="exchange-button">
-                                <img src="images/main-content/35815.png" alt="">
-                                ETH
-                                <i class="bi bi-chevron-down"></i>
-                            </button>
-                            <input id="input-receive" type="text" value="0.1499964">
-                        </label>
-                        <b>1 ETH = 0.0632155902 ETH</b>
-                    </div>
-                </div>
-                <div class="block-info-exchange">
-                    <div class="block-plus">
-                        <img src="images/main-content/plus.svg" alt="">
-                        <span>Try enghting!</span>
-                    </div>
-                    <div class="value-btc">
-                        1 BTC = 14.435355902 ETH
-                    </div>
-                    <div class="value-eth">
-                        1 ETH = 0.0632155902 ETH
-                    </div>
-                </div>
-                <div class="button-adress">
-                    <button style="border: 0">
-                        <img src="images/main-content/adress.png" alt="">
-                        Your Ethereum adress
-                    </button>
-                </div>
-                <div class="button-exchange">
-                    <button>
-                        Exchange now
-                        <img src="images/main-content/arrow-left.png" alt="">
-                    </button>
-                    <div>
-                        <p>What is the difference?</p>
-                    </div>
-                </div>
-            </form> -->
-
-
-
-
             <form action="">
                 <div class="block-inputs-exchange">
                     <div>
@@ -136,7 +75,7 @@
                                 <i class="bi bi-chevron-down"></i>
                             </button>
                         </label>
-                        <b>1 BTC = 14.435355902 ETH</b>
+                        <b id="value-send">1 BTC = 14.435355902 ETH</b>
                     </div>
                     <div class="arrow-exchange">
                         <i class="bi bi-arrow-left-right"></i>
@@ -191,33 +130,33 @@
                     </div>
                     <div class="describ">
                         <h3>Save time </h3>
-                            Maximum exchange speed due to the full automation
-                        </div>
-                    </div>
-                </div>
-                <div class="blocks-description">
-                    <div class="block-describ">
-                        <div>
-                            <img src="images/main-content/money.png" alt="">
-                        </div>
-                        <div class="describ">
-                            <h3>Save time </h3>
-                            Maximum exchange speed due to the full automation
-                        </div>
-                    </div>
-                </div>
-                <div class="blocks-description">
-                    <div class="block-describ">
-                        <div>
-                            <img src="images/main-content/bitcoin.png" alt="">
-                        </div>
-                        <div class="describ">
-                            <h3>Save time </h3>
-                            Maximum exchange speed due to the full automation
-                        </div>
+                        Maximum exchange speed due to the full automation
                     </div>
                 </div>
             </div>
+            <div class="blocks-description">
+                <div class="block-describ">
+                    <div>
+                        <img src="images/main-content/money.png" alt="">
+                    </div>
+                    <div class="describ">
+                        <h3>Save time </h3>
+                        Maximum exchange speed due to the full automation
+                    </div>
+                </div>
+            </div>
+            <div class="blocks-description">
+                <div class="block-describ">
+                    <div>
+                        <img src="images/main-content/bitcoin.png" alt="">
+                    </div>
+                    <div class="describ">
+                        <h3>Save time </h3>
+                        Maximum exchange speed due to the full automation
+                    </div>
+                </div>
+            </div>
+        </div>
         <div style="padding: 30px 0; text-align: center">
             <h2 style="font-size: 20px;text-transform: uppercase;color: #fff">why can i trust you</h2>
         </div>
@@ -320,7 +259,7 @@
                     </button>
                 </div>
             </div>
-           <div class="block-card">
+            <div class="block-card">
                 <div class="buttons-card">
                     <button>
                         # Free mint tokens
@@ -370,32 +309,32 @@
             </div>
         </div>
         <footer>
-		    <div class="footer-content">
-		        <div class="footer-info">
-		            <div class="footer-logo">
-		                <img src="images/header-images/logo.png" alt="">
-		                <img src="images/header-images/zone.png" alt="">
-		                <img src="images/header-images/51.png" alt="">
-		            </div>
-		            <div>
-		                <p>(C) 2020-2022 Zone51. All rights reserved.</p>
-		            </div>
-		        </div>
-		        <div>
-		            <nav>
-		                <a href="">home</a>
-		                <a href="">about</a>
-		                <a href="">blog</a>
-		                <a href="">faq</a>
-		                <a href=""></a>
-		            </nav>
-		        </div>
-		        <div class="block-support">
-		            <img src="images/footer-images/message.png" alt="">
-		            support
-		        </div>
-		    </div>
-		</footer>
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="footer-logo">
+                        <img src="images/header-images/logo.png" alt="">
+                        <img src="images/header-images/zone.png" alt="">
+                        <img src="images/header-images/51.png" alt="">
+                    </div>
+                    <div>
+                        <p>(C) 2020-2022 Zone51. All rights reserved.</p>
+                    </div>
+                </div>
+                <div>
+                    <nav>
+                        <a href="">home</a>
+                        <a href="">about</a>
+                        <a href="">blog</a>
+                        <a href="">faq</a>
+                        <a href=""></a>
+                    </nav>
+                </div>
+                <div class="block-support">
+                    <img src="images/footer-images/message.png" alt="">
+                    support
+                </div>
+            </div>
+        </footer>
     </div>
 </div>
 <div class="element-of-background-left">
@@ -408,6 +347,8 @@
     <img src="images/background/background-texture.png" alt="">
 </div>
 <script src="main.js">
+</script>
+<script src="change.js">
 </script>
 </body>
 </html>
